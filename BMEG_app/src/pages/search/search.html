@@ -15,4 +15,23 @@
 
 <ion-content padding>
 
+    <form #formCtrl="ngForm">
+    <ion-list>
+
+        <ion-item>
+        <ion-label floating>Choose Materials</ion-label>
+        <ion-select [(ngModel)]="materials" name="materials" multiple="true">
+          <ion-option>Wood</ion-option>
+          <ion-option>Bamboo</ion-option>
+          <ion-option>Steel</ion-option>
+          <ion-option>Concrete</ion-option>
+        </ion-select>
+        </ion-item>
+
+    </ion-list>
+
+    <button color="secondary" [disabled]="!formCtrl.form.valid" ion-button block (click)="search()">Search</button>
+
+  </form>
+
 </ion-content>
