@@ -1,13 +1,40 @@
-Scenario,Definition,,Floor #,Floor Type,,Wall #,Wall Type,,Roof #,Roof Type,,Option ,
-1,No Wood,,1,Brick-Concrete,,1,Brick-Concrete,,1,Wood-CGI,,1,Always lowest embedded energy
-2,No CGI,,2,Stone-Concrete,,2,Stone-Concrete,,2,Wood-Slate,,Highest option,Always lowest cost
-3,No Slate,,3,Brick-Aerated Concrete,,3,Bamboo-Concrete,,3,Bamboo-CGI,,If Medium Option,Intermediate choice
-4,No Aluminum,,,,,4,CSEB-Concrete,,4,Wood-Aluminum,,,
-5,No Ceramic,,,,,5,Concrete Blocks-Concrete,,5,Bamboo-Aluminum,,,
-6,No Plywood,,,,,6,Brick-Aerated Concrete,,6,Plywood-Wood-Ceramic,,,
-7,No Bamboo,,,,,,,,7,Bamboo-Wood-Ceramic,,,
-8,No Brick,,,,,,,,,,,,
-9,No Stone,,,,,,,,,,,,
-10,No CSEB,,,,,,,,,,,,
-11,No Concrete,,,,,,,,,,,,
-12,No Aerated Concrete,,,,,,,,,,,,
+Scenario,Definition
+1,No Wood
+2,No CGI
+3,No Slate
+4,No Aluminum
+5,No Ceramic
+6,No Plywood
+7,No Bamboo
+8,No Brick
+9,No Stone
+10,No CSEB
+11,No Concrete
+12,No Aerated Concrete
+,
+Floor #,Floor Type
+1,Brick-Concrete
+2,Stone-Concrete
+3,Brick-Aerated Concrete
+,
+Wall #,Wall Type
+1,Brick-Concrete
+2,Stone-Concrete
+3,Bamboo-Concrete
+4,CSEB-Concrete
+5,Concrete Blocks-Concrete
+6,Brick-Aerated Concrete
+,
+Roof #,Roof Type
+1,Wood-CGI
+2,Wood-Slate
+3,Bamboo-CGI
+4,Wood-Aluminum
+5,Bamboo-Aluminum
+6,Plywood-Wood-Ceramic
+7,Bamboo-Wood-Ceramic
+,
+Option,
+1,Always lowest embedded energy
+2,Always lowest cost
+3,Intermediate choice

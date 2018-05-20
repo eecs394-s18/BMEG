@@ -1,7 +1,17 @@
-import csv, json;
+import csv, json, io;
 
-descriptors = ['Scenario', 'Floor #', 'Wall #', 'Roof #', 'Option']
+# Index of "descriptors" maps to key of "keys" - both must be the same length.
+descriptors = ['Scenario', 'Floor #', 'Wall #', 'Roof #', 'Option', '']
 results = {}
+keys = {
+    0: {},
+    1: {},
+    2: {},
+    3: {},
+    4: {},
+    5: {},
+}
+index = None
 
 with open('WWF_Results.csv') as csvfile:
     my_reader = csv.reader(csvfile)
@@ -22,4 +32,24 @@ with open('WWF_Results.csv') as csvfile:
 
             results[row[0]][row[1]] = data_dict
 
-print json.dumps(results)
+# Write to database folder
+with io.open('../assets/database/results.json', 'w', encoding = 'utf-8') as f:
+    f.write(unicode(json.dumps(results, ensure_ascii = False)))
+
+with open('WWF_Key.csv') as csvfile:
+    my_reader = csv.reader(csvfile)
+    for row in my_reader:
+        if (row[0] in descriptors):
+            index = descriptors.index(row[0]) # set key value to add to appropriate dictionary
+            continue;
+        else:
+            if (index == 0):    # reverse key-value ordering for scenario option
+                name = row[1][3:]     # strip "no" from string
+                keys[index][name] = row[0]
+            else:
+                keys[index][row[0]] = row[1]
+
+# Write each dictionary to database folder
+for key, value in keys.iteritems():
+    with io.open('../assets/database/' + descriptors[key].lower() + '.json', 'w', encoding = 'utf-8') as f:
+        f.write(unicode(json.dumps(value, ensure_ascii = False)))
