@@ -31,6 +31,7 @@ export class ResultsPage {
     this.low_cost = data[scenario_number][1]
     this.middle = data[scenario_number][2]
     this.low_impact = data[scenario_number][3]
+    console.log(this.low_cost,this.middle,this.low_impact)
   }
 
 }
