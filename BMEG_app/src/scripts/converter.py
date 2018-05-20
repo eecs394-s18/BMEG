@@ -1,5 +1,8 @@
 import csv, json, io;
 
+# PRECONDITION: files "WWF_Results.csv" and "WWF_Key.csv" must be in same folder as this script.
+# OUTPUT: JSON files to the database folder.
+
 # Index of "descriptors" maps to key of "keys" - both must be the same length.
 descriptors = ['Scenario', 'Floor #', 'Wall #', 'Roof #', 'Option', '']
 results = {}
@@ -17,7 +20,7 @@ with open('WWF_Results.csv') as csvfile:
     my_reader = csv.reader(csvfile)
     for row in my_reader:
         if (row[0] in descriptors):
-            continue;   # ignore header rows contained in descriptors list
+            continue     # ignore header rows contained in descriptors list
         else:
             data_dict = {
                 'cost': row[2],
@@ -51,5 +54,7 @@ with open('WWF_Key.csv') as csvfile:
 
 # Write each dictionary to database folder
 for key, value in keys.iteritems():
+    if (descriptors[key] == ''): # skip empty character delimiter
+        continue
     with io.open('../assets/database/' + descriptors[key].lower() + '.json', 'w', encoding = 'utf-8') as f:
         f.write(unicode(json.dumps(value, ensure_ascii = False)))
