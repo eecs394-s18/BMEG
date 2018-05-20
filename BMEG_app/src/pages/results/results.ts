@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BuildingplansPage } from '../buildingplans/buildingplans'
 
 /**
  * Generated class for the ResultsPage page.
@@ -32,6 +33,10 @@ export class ResultsPage {
     this.middle = data[scenario_number][2]
     this.low_impact = data[scenario_number][3]
     console.log(this.low_cost,this.middle,this.low_impact)
+  }
+
+  buildingplans() {
+  	this.navCtrl.push(BuildingplansPage);
   }
 
 }
