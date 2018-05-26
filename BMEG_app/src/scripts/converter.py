@@ -56,5 +56,5 @@ with open('WWF_Key.csv') as csvfile:
 for key, value in keys.iteritems():
     if (descriptors[key] == ''): # skip empty character delimiter
         continue
-    with io.open('../assets/database/' + descriptors[key].lower() + '.json', 'w', encoding = 'utf-8') as f:
+    with io.open('../assets/database/' + descriptors[key].lower().replace(" ", "") + '.json', 'w', encoding = 'utf-8') as f:
         f.write(unicode(json.dumps(value, ensure_ascii = False)))

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BuildingplansPage } from '../buildingplans/buildingplans'
+import { BuildingplansPage } from '../buildingplans/buildingplans';
 
 /**
  * Generated class for the ResultsPage page.
@@ -23,15 +24,19 @@ export class ResultsPage {
 	public wallType:any;
 	public roofType:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	this.low_cost={};
-  	this.middle={};
-  	this.low_impact={};
-  	this.floorType={
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
+  	this.low_cost = {};
+  	this.middle = {};
+  	this.low_impact = {};
+  	this.floorType = {
   		1:'Brick-Concrete',
   		2:'Stone-Concrete',
   		3:'Brick-Aerated Conrete'
-  	};
+	};
+	  
+	let test = this.http.get('../../assets/database/scenarios.json').subscribe(data => {
+		console.log(data);
+   });
 
   	this.wallType = {
   		1:"Brick-Concrete",
