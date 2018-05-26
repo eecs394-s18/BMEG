@@ -52,9 +52,9 @@ export class ResultsPage {
 		console.log(material);
 		console.log(scenario_number);
 
-		this.low_cost = this.results[scenario_number][1]
-		this.middle = this.results[scenario_number][2]
-		this.low_impact = this.results[scenario_number][3]
+		this.low_cost = this.results[scenario_number][2]
+		this.middle = this.results[scenario_number][3]
+		this.low_impact = this.results[scenario_number][1]
 		console.log(this.low_cost,this.middle,this.low_impact)
 	});
   }

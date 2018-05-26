@@ -26,14 +26,14 @@
 			<ion-card-title>Low Energy</ion-card-title>
 			<ion-list>
 				<ion-item>
-					<ion-icon name="ios-usd"><b>$</b>11188</ion-icon>
+					<ion-icon name="ios-usd"><b>$</b>{{ low_impact.cost }}</ion-icon>
 				</ion-item>
 				<ion-item>
-					<ion-icon name="ios-leaf">293</ion-icon>
+					<ion-icon name="ios-leaf">{{ low_impact.energy }}</ion-icon>
 				</ion-item>
-				<ion-item><b>Floor:</b> {{floorType[low_impact['Floor']]}}</ion-item>
-				<ion-item><b>Walls:</b> {{wallType[low_impact['Walls']]}}</ion-item>
-				<ion-item><b>Ceiling:</b> {{roofType[low_impact['Roof']]}}</ion-item>
+				<ion-item><b>Floor:</b> {{ floorType[low_impact.floor] }}</ion-item>
+				<ion-item><b>Walls:</b> {{ wallType[low_impact.walls] }}</ion-item>
+				<ion-item><b>Ceiling:</b> {{ roofType[low_impact.roof] }}</ion-item>
 			</ion-list>
 		</ion-card-content>
 	</ion-card>
@@ -42,14 +42,14 @@
 			<ion-card-title>Low Cost</ion-card-title>
 			<ion-list>
 				<ion-item>
-					<ion-icon name="ios-usd"><b>$</b>5461</ion-icon>
+					<ion-icon name="ios-usd"><b>$</b>{{ low_cost.cost }}</ion-icon>
 				</ion-item>
 				<ion-item>
-					<ion-icon name="ios-leaf">631</ion-icon>
+					<ion-icon name="ios-leaf">{{ low_cost.energy }}</ion-icon>
 				</ion-item>
-				<ion-item><b>Floor:</b> {{floorType[low_cost['Floor']]}}</ion-item>
-				<ion-item><b>Walls:</b> {{wallType[low_cost['Walls']]}}</ion-item>
-				<ion-item><b>Ceiling:</b> {{roofType[low_cost['Roof']]}}</ion-item>
+				<ion-item><b>Floor:</b> {{ floorType[low_cost.floor] }}</ion-item>
+				<ion-item><b>Walls:</b> {{ wallType[low_cost.walls] }}</ion-item>
+				<ion-item><b>Ceiling:</b> {{ roofType[low_cost.roof] }}</ion-item>
 			</ion-list>
 		</ion-card-content>
 	</ion-card>
@@ -58,14 +58,14 @@
 			<ion-card-title>Compromise</ion-card-title>
 			<ion-list>
 				<ion-item>
-					<ion-icon name="ios-usd"><b>$</b>9861</ion-icon>
+					<ion-icon name="ios-usd"><b>$</b>{{ middle.cost }}</ion-icon>
 				</ion-item>
 				<ion-item>
-					<ion-icon name="ios-leaf">493</ion-icon>
+					<ion-icon name="ios-leaf">{{ middle.energy }}</ion-icon>
 				</ion-item>
-				<ion-item><b>Floor:</b> {{floorType[middle['Floor']]}}</ion-item>
-				<ion-item><b>Walls:</b> {{wallType[middle['Walls']]}}</ion-item>
-				<ion-item><b>Ceiling:</b> {{roofType[middle['Roof']]}}</ion-item>
+				<ion-item><b>Floor:</b> {{ floorType[middle.floor] }}</ion-item>
+				<ion-item><b>Walls:</b> {{ wallType[middle.walls] }}</ion-item>
+				<ion-item><b>Ceiling:</b> {{ roofType[middle.roof] }}</ion-item>
 			</ion-list>
 		</ion-card-content>
 	</ion-card>
