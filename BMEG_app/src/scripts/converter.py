@@ -4,7 +4,7 @@ import csv, json, io;
 # OUTPUT: JSON files to the database folder.
 
 # Index of "descriptors" maps to key of "keys" - both must be the same length.
-descriptors = ['Scenario', 'Floor #', 'Wall #', 'Roof #', 'Option', '']
+descriptors = ['Scenario', 'Floor Number', 'Wall Number', 'Roof Number', 'Option', '']
 results = {}
 keys = {
     0: {},
@@ -56,5 +56,5 @@ with open('WWF_Key.csv') as csvfile:
 for key, value in keys.iteritems():
     if (descriptors[key] == ''): # skip empty character delimiter
         continue
-    with io.open('../assets/database/' + descriptors[key].lower().replace(" ", "") + '.json', 'w', encoding = 'utf-8') as f:
+    with io.open('../assets/database/' + descriptors[key].lower().replace(" ", "_") + '.json', 'w', encoding = 'utf-8') as f:
         f.write(unicode(json.dumps(value, ensure_ascii = False)))
