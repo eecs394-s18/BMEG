@@ -18,11 +18,50 @@
 		<ion-list>
 
 	        <ion-item>
-	        <ion-label floating>How resistant does the material need to be to mold, insects, and termites?</ion-label>
+	        <ion-label floating>Insects, Mold, and Termites</ion-label>
 	        <!--options are: susceptible to attack, good, susceptible, excellent -->
 	        <ion-select [(ngModel)]="insectresistance" name="insectresistance" multiple="false">
 	          <ion-option>Very resistant</ion-option>
 	          <ion-option>Resistant</ion-option>
+	          <ion-option>Not resistant</ion-option>
+
+	        </ion-select>
+	        </ion-item>
+
+    	</ion-list>
+        <ion-list>
+
+	        <ion-item>
+	        <ion-label floating>Soil Type</ion-label>
+	        <ion-select [(ngModel)]="soiltype" name="soiltype" multiple="false">
+	          <ion-option>Acidic</ion-option>
+	          <ion-option>Alkali</ion-option>
+	          <ion-option>Neutral</ion-option>
+
+	        </ion-select>
+	        </ion-item>
+
+    	</ion-list>
+        <ion-list>
+
+	        <ion-item>
+	        <ion-label floating>Flammability</ion-label>
+	        <ion-select [(ngModel)]="flammability" name="flammability" multiple="false">
+	          <ion-option>Non flammable</ion-option>
+	          <ion-option>Resistant</ion-option>
+              <ion-option>Not resistant</ion-option>
+
+	        </ion-select>
+	        </ion-item>
+
+    	</ion-list>
+        <ion-list>
+
+	        <ion-item>
+	        <ion-label floating>Water</ion-label>
+	        <ion-select [(ngModel)]="soiltype" name="soiltype" multiple="false">
+	          <ion-option>Salt water resistant</ion-option>
+	          <ion-option>Fresh water resistant</ion-option>
 	          <ion-option>Not resistant</ion-option>
 
 	        </ion-select>
