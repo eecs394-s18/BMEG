@@ -48,10 +48,6 @@ export class ResultsPage {
 
 		let material = this.navParams.get('materials')
 		let scenario_number = this.scenarios[material];
-		console.log(this.scenarios);
-		console.log(material);
-		console.log(scenario_number);
-
 		this.low_cost = this.results[scenario_number][2]
 		this.middle = this.results[scenario_number][3]
 		this.low_impact = this.results[scenario_number][1]

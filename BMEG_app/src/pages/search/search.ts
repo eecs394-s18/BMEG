@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 import { ResultsPage } from '../results/results'
 
@@ -18,7 +19,7 @@ import { ResultsPage } from '../results/results'
 export class SearchPage {
     public materials:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
       this.materials = {};
   }
 
@@ -30,7 +31,16 @@ export class SearchPage {
   search() {
       console.log('search');
       console.log(this.materials);
-      this.navCtrl.push(ResultsPage, {materials: this.materials});
-  }
 
+      if (Object.keys(this.materials).length == 0) {
+        let alert = this.alertCtrl.create({
+          title: 'Oops!',
+          subTitle: 'You must select at least one unavailable material before searching.',
+          buttons: ['OK']
+        });
+        alert.present();    
+      } else {
+        this.navCtrl.push(ResultsPage, {materials: this.materials});
+      }
+  }
 }
