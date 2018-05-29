@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Questionnaire to Understand the Types of Materials Needed for the Region</ion-title>
+    <ion-title>Region Info</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,12 +18,11 @@
 		<ion-list>
 
 	        <ion-item>
-	        <ion-label floating>Insects, Mold, and Termites</ion-label>
-	        <!--options are: susceptible to attack, good, susceptible, excellent -->
+	        <ion-label floating>Climate</ion-label>
 	        <ion-select [(ngModel)]="insectresistance" name="insectresistance" multiple="false">
-	          <ion-option>Very resistant</ion-option>
-	          <ion-option>Resistant</ion-option>
-	          <ion-option>Not resistant</ion-option>
+	          <ion-option>Tropical</ion-option>
+	          <ion-option>Temperate</ion-option>
+	          <ion-option>Desert</ion-option>
 
 	        </ion-select>
 	        </ion-item>
@@ -45,24 +44,10 @@
         <ion-list>
 
 	        <ion-item>
-	        <ion-label floating>Flammability</ion-label>
-	        <ion-select [(ngModel)]="flammability" name="flammability" multiple="false">
-	          <ion-option>Non flammable</ion-option>
-	          <ion-option>Resistant</ion-option>
-              <ion-option>Not resistant</ion-option>
-
-	        </ion-select>
-	        </ion-item>
-
-    	</ion-list>
-        <ion-list>
-
-	        <ion-item>
-	        <ion-label floating>Water</ion-label>
-	        <ion-select [(ngModel)]="soiltype" name="soiltype" multiple="false">
+	        <ion-label floating>Salt Water</ion-label>
+	        <ion-select [(ngModel)]="water" name="soiltype" multiple="false">
 	          <ion-option>Salt water resistant</ion-option>
-	          <ion-option>Fresh water resistant</ion-option>
-	          <ion-option>Not resistant</ion-option>
+	          <ion-option>Not a concern</ion-option>
 
 	        </ion-select>
 	        </ion-item>
