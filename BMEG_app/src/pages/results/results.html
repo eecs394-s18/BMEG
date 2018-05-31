@@ -6,22 +6,21 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="header">
     <ion-title>Recommendations</ion-title>
-    <ion-buttons end>
-    	<ion-icon name="star"></ion-icon>
-    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
-	<ion-card>
-		<ion-card-title>Two Room One Story House</ion-card-title>
-		<img src="../assets/imgs/house.png">
-		<button ion-button block (click)="buildingplans()">View Building Plans</button>
+<ion-content padding class="background">
+	<ion-card >
+		<ion-card-content>
+			<ion-card-title>Two Room One Story House</ion-card-title>
+			<img src="../assets/imgs/house.png">
+			<button ion-button block (click)="buildingplans()">View Building Plans</button>
+		</ion-card-content>
 	</ion-card>
-	<ion-card>
+	<ion-card color="eco">
 		<ion-card-content>
 			<ion-card-title>Low Energy</ion-card-title>
 			<ion-list *ngIf="low_impact !== undefined">
@@ -29,7 +28,7 @@
 					<ion-icon name="ios-usd"><b>$</b>{{ low_impact.cost }}</ion-icon>
 				</ion-item>
 				<ion-item>
-					<ion-icon name="ios-leaf">{{ low_impact.energy }}</ion-icon>
+					<ion-icon name="ios-leaf" color="leaf">{{ low_impact.energy }}</ion-icon>
 				</ion-item>
 				<ion-item><b>Floor:</b> {{ floorType[low_impact.floor] }}</ion-item>
 				<ion-item><b>Walls:</b> {{ wallType[low_impact.walls] }}</ion-item>
@@ -40,7 +39,7 @@
 			</div>
 		</ion-card-content>
 	</ion-card>
-	<ion-card>
+	<ion-card color="cheap">
 		<ion-card-content>
 			<ion-card-title>Low Cost</ion-card-title>
 			<ion-list *ngIf="low_cost !== undefined">
@@ -48,7 +47,7 @@
 					<ion-icon name="ios-usd"><b>$</b>{{ low_cost.cost }}</ion-icon>
 				</ion-item>
 				<ion-item>
-					<ion-icon name="ios-leaf">{{ low_cost.energy }}</ion-icon>
+					<ion-icon name="ios-leaf" color="leaf">{{ low_cost.energy }}</ion-icon>
 				</ion-item>
 				<ion-item><b>Floor:</b> {{ floorType[low_cost.floor] }}</ion-item>
 				<ion-item><b>Walls:</b> {{ wallType[low_cost.walls] }}</ion-item>
@@ -59,7 +58,7 @@
 			</div>
 		</ion-card-content>
 	</ion-card>
-	<ion-card>
+	<ion-card color="compromise">
 		<ion-card-content>
 			<ion-card-title>Compromise</ion-card-title>
 			<ion-list *ngIf="middle !== undefined">
@@ -67,7 +66,7 @@
 					<ion-icon name="ios-usd"><b>$</b>{{ middle.cost }}</ion-icon>
 				</ion-item>
 				<ion-item>
-					<ion-icon name="ios-leaf">{{ middle.energy }}</ion-icon>
+					<ion-icon name="ios-leaf" color="leaf">{{ middle.energy }}</ion-icon>
 				</ion-item>
 				<ion-item><b>Floor:</b> {{ floorType[middle.floor] }}</ion-item>
 				<ion-item><b>Walls:</b> {{ wallType[middle.walls] }}</ion-item>
