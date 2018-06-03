@@ -1,6 +1,6 @@
 {
   "0": {
-    "name": "earth_blend",
+    "name": "Compressed Stabilized Earth Blocks",
     "acidic": false,
     "alkaline": false,
     "salt_water": false,
@@ -9,7 +9,7 @@
     "desert": true
   },
   "1": {
-    "name": "bamboo",
+    "name": "Bamboo",
     "acidic": false,
     "alkaline": false,
     "salt_water": false,
@@ -18,7 +18,7 @@
     "desert": true
   },
   "4": {
-    "name": "wood_oak",
+    "name": "Wood",
     "acidic": true,
     "alkaline": false,
     "salt_water": true,
@@ -27,7 +27,7 @@
     "desert": true
   },
   "7": {
-    "name": "plywood",
+    "name": "Plywood",
     "acidic": false,
     "alkaline": false,
     "salt_water": true,
@@ -36,7 +36,7 @@
     "desert": true
   },
   "9": {
-    "name": "ceramic_tiles",
+    "name": "Ceramic Tiles",
     "acidic": true,
     "alkaline": false,
     "salt_water": true,
@@ -45,7 +45,7 @@
     "desert": true
   },
   "11": {
-    "name": "stone",
+    "name": "Stone",
     "acidic": true,
     "alkaline": true,
     "salt_water": true,
@@ -54,7 +54,7 @@
     "desert": true
   },
   "13": {
-    "name": "slate",
+    "name": "Slate",
     "acidic": true,
     "alkaline": true,
     "salt_water": true,
@@ -63,7 +63,7 @@
     "desert": true
   },
   "16": {
-    "name": "concrete",
+    "name": "Concrete",
     "acidic": true,
     "alkaline": true,
     "salt_water": true,
@@ -72,7 +72,7 @@
     "desert": true
   },
   "17": {
-    "name": "aerated_concrete",
+    "name": "Aerated Concrete",
     "acidic": true,
     "alkaline": true,
     "salt_water": true,
@@ -81,7 +81,7 @@
     "desert": true
   },
   "20": {
-    "name": "brick",
+    "name": "Brick",
     "acidic": true,
     "alkaline": true,
     "salt_water": true,
@@ -90,7 +90,7 @@
     "desert": true
   },
   "21": {
-    "name": "CGI_Sheets",
+    "name": "CGI Sheets",
     "acidic": true,
     "alkaline": true,
     "salt_water": true,
@@ -99,7 +99,7 @@
     "desert": true
   },
   "24": {
-    "name": "aluminum",
+    "name": "Aluminum",
     "acidic": false,
     "alkaline": false,
     "salt_water": true,
