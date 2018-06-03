@@ -26,6 +26,8 @@ export class ResultsPage {
 	public roofType:any;
 	public scenarios:any;
 	public results:any;
+	
+	public nameMap:any;
 
   	constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
 
@@ -37,6 +39,14 @@ export class ResultsPage {
 		this.roofType = {};
 		this.scenarios = {};
 		this.results = {};
+
+		// Maps dropdown material display names to json database index names
+		// Format is {'displayName': 'DB index name'}
+		this.nameMap = {
+			'CGI Sheets': 'CGI',
+			'Compressed Stabilized Earth Blocks': 'CSEB',
+			'Ceramic Tiles': 'Ceramic'
+		};
   	}
 
   ionViewDidLoad() {
@@ -47,11 +57,16 @@ export class ResultsPage {
 		console.log("finished reading data");
 
 		let material = this.navParams.get('materials')
+
+		// Replace display name with database index name
+		if (this.nameMap[material] != undefined) {
+			material = this.nameMap[material];
+		}
+
 		let scenario_number = this.scenarios[material];
 		this.low_cost = this.results[scenario_number][2]
 		this.middle = this.results[scenario_number][3]
 		this.low_impact = this.results[scenario_number][1]
-		console.log(this.low_cost,this.middle,this.low_impact)
 	});
   }
 
