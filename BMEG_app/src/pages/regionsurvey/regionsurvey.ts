@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search'
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the RegionsurveyPage page.
@@ -16,7 +17,10 @@ import { SearchPage } from '../search/search'
 })
 export class RegionsurveyPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public results:{climate: string, soiltype: string, water: string};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
+    this.results = {climate: "", soiltype: "", water: ""};
   }
 
   ionViewDidLoad() {
@@ -24,7 +28,32 @@ export class RegionsurveyPage {
   }
 
   findmaterials() {
-  	this.navCtrl.push(SearchPage);
+    this.http.get('../../assets/database/decision_tree_util.json').toPromise().then(data => {
+      const climate = this.results.climate;
+      const soil_type = this.results.soiltype;
+      const water = this.results.water;
+
+      var acidic = (soil_type == "Acidic" ? true : false);
+      var alkali = (soil_type == "Alkali" ? true : false);
+      var neutral = (soil_type == "Neutral" ? true : false);
+      var salt = (water == "Salt water resistant" ? true : false);
+
+      var names = [];
+      
+      // Get JSON here
+      for (var key in data) {
+        var shouldAdd = true;
+
+        if (acidic && !data[key]["acidic"]) shouldAdd = false;
+        if (alkali && !data[key]["alkaline"]) shouldAdd = false;
+        if (salt && !data[key]["salt_water"]) shouldAdd = false;
+
+        if (shouldAdd) names.push(data[key]["name"]);
+      }
+      this.navCtrl.push(SearchPage, { names: names });
+    }).catch(err => {
+      console.log(err);
+    });
   }
 
 }

@@ -19,7 +19,7 @@
 
 	        <ion-item>
 	        <ion-label floating>Climate</ion-label>
-	        <ion-select [(ngModel)]="insectresistance" name="insectresistance" multiple="false">
+	        <ion-select [(ngModel)]="results.climate" name="climate" multiple="false" required>
 	          <ion-option>Tropical</ion-option>
 	          <ion-option>Temperate</ion-option>
 	          <ion-option>Desert</ion-option>
@@ -32,7 +32,7 @@
 
 	        <ion-item>
 	        <ion-label floating>Soil Type</ion-label>
-	        <ion-select [(ngModel)]="soiltype" name="soiltype" multiple="false">
+	        <ion-select [(ngModel)]="results.soiltype" name="soiltype" multiple="false" required>
 	          <ion-option>Acidic</ion-option>
 	          <ion-option>Alkali</ion-option>
 	          <ion-option>Neutral</ion-option>
@@ -45,7 +45,7 @@
 
 	        <ion-item>
 	        <ion-label floating>Salt Water</ion-label>
-	        <ion-select [(ngModel)]="water" name="soiltype" multiple="false">
+	        <ion-select [(ngModel)]="results.water" name="water" multiple="false" required>
 	          <ion-option>Salt water resistant</ion-option>
 	          <ion-option>Not a concern</ion-option>
 
