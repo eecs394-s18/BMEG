@@ -26,7 +26,7 @@ export class ResultsPage {
 	public roofType:any;
 	public scenarios:any;
 	public results:any;
-	
+
 	public nameMap:any;
 
   	constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
@@ -57,6 +57,8 @@ export class ResultsPage {
 		console.log("finished reading data");
 
 		let material = this.navParams.get('materials')
+
+    console.log(material);
 
 		// Replace display name with database index name
 		if (this.nameMap[material] != undefined) {

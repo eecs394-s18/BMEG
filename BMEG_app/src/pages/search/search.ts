@@ -18,9 +18,12 @@ import { ResultsPage } from '../results/results'
 })
 export class SearchPage {
     public materials:any;
+    public names: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
       this.materials = {};
+      this.names = this.navParams.get("names") as any;
+      console.log(this.names);
   }
 
   ionViewDidLoad() {
@@ -38,7 +41,7 @@ export class SearchPage {
           subTitle: 'You must select at least one unavailable material before searching.',
           buttons: ['OK']
         });
-        alert.present();    
+        alert.present();
       } else {
         this.navCtrl.push(ResultsPage, {materials: this.materials});
       }
