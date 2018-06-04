@@ -1,0 +1,110 @@
+{
+  "0": {
+    "name": "Compressed Stabilized Earth Blocks",
+    "acidic": false,
+    "alkaline": false,
+    "salt_water": false,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "1": {
+    "name": "Bamboo",
+    "acidic": false,
+    "alkaline": false,
+    "salt_water": false,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "4": {
+    "name": "Wood",
+    "acidic": true,
+    "alkaline": false,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "7": {
+    "name": "Plywood",
+    "acidic": false,
+    "alkaline": false,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "9": {
+    "name": "Ceramic Tiles",
+    "acidic": true,
+    "alkaline": false,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "11": {
+    "name": "Stone",
+    "acidic": true,
+    "alkaline": true,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "13": {
+    "name": "Slate",
+    "acidic": true,
+    "alkaline": true,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "16": {
+    "name": "Concrete",
+    "acidic": true,
+    "alkaline": true,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "17": {
+    "name": "Aerated Concrete",
+    "acidic": true,
+    "alkaline": true,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "20": {
+    "name": "Brick",
+    "acidic": true,
+    "alkaline": true,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "21": {
+    "name": "CGI Sheets",
+    "acidic": true,
+    "alkaline": true,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  },
+  "24": {
+    "name": "Aluminum",
+    "acidic": false,
+    "alkaline": false,
+    "salt_water": true,
+    "tropical": true,
+    "temperate": true,
+    "desert": true
+  }
+}

@@ -6,14 +6,14 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="header">
     <ion-title>Search</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="background">
 
     <form #formCtrl="ngForm">
     <ion-list>
@@ -21,19 +21,7 @@
         <ion-item>
         <ion-label floating>Choose Unavailable Material</ion-label>
         <ion-select [(ngModel)]="materials" name="materials" multiple="false">
-          <ion-option>Wood</ion-option>
-          <ion-option>CGI Sheets</ion-option>
-          <ion-option>Slate</ion-option>
-          <ion-option>Aluminum</ion-option>
-          <ion-option>Ceramic Tiles</ion-option>
-          <ion-option>Plywood</ion-option>
-          <ion-option>Bamboo</ion-option>
-          <ion-option>Brick</ion-option>
-          <ion-option>Stone</ion-option>
-          <ion-option>Compressed Stabilized Earth Blocks</ion-option>
-          <ion-option>Concrete</ion-option>
-          <ion-option>Aerated Concrete</ion-option>
-
+          <ion-option *ngFor="let name of names">{{ name }}</ion-option>
         </ion-select>
         </ion-item>
 
