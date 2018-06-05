@@ -19,12 +19,20 @@
     <ion-list>
 
         <ion-item>
-        <ion-label floating>Choose Unavailable Material</ion-label>
-        <ion-select [(ngModel)]="materials" name="materials" multiple="false">
+        <ion-label floating>Are Any Materials Unavailable?</ion-label>
+        <ion-select [(ngModel)]="materials" name="materials" multiple="true">
           <ion-option *ngFor="let name of names">{{ name }}</ion-option>
         </ion-select>
         </ion-item>
 
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Select Building Type</ion-label>
+            <ion-select [(ngModel)]="building_type" name="building_type" multiple="false">
+                <ion-option *ngFor="let b_type of building_types">{{ b_type }}</ion-option>
+            </ion-select>
+        </ion-item>
     </ion-list>
 
     <button color="secondary" [disabled]="!formCtrl.form.valid" ion-button block (click)="search()">Search</button>

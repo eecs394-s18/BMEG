@@ -19,11 +19,13 @@ import { ResultsPage } from '../results/results'
 export class SearchPage {
     public materials:any;
     public names: any;
+    public building_types: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
       this.materials = {};
       this.names = this.navParams.get("names") as any;
       console.log(this.names);
+      this.building_types = ['Two Room House','Three Room House', 'Four Room House']
   }
 
   ionViewDidLoad() {
