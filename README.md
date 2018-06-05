@@ -1,6 +1,6 @@
-"# BMEG"
-Flow of the app (all of the pages are located in the src folder):
+Flow of the BMEG app (all of the pages are located in the src folder):
 Home Page-> Regionsurvey Page-> Search Page-> Results Page-> Buildingplans Page
+[Insert video of the app in use]
 
 Instructions to update the app to incorporate data from updated algorithm:
 (1) The algorithm that finds the best combination of materials given a list of materials outputs the results in a csv format. Here is the Python script that converts that csv to a JSON file [link to Python script]
