@@ -58,7 +58,7 @@ export class ResultsPage {
 
 		let material = this.navParams.get('materials')
 
-    console.log(material);
+    	console.log(material);
 
 		// Replace display name with database index name
 		if (this.nameMap[material] != undefined) {

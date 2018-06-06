@@ -22,9 +22,10 @@ export class SearchPage {
     public building_types: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
-      this.materials = {};
+      this.materials = [];
       this.names = this.navParams.get("names") as any;
-      console.log(this.names);
+      this.names.sort();
+      this.names.unshift("All Available");
       this.building_types = ['Two Room House','Three Room House', 'Four Room House']
   }
 
@@ -34,13 +35,26 @@ export class SearchPage {
   }
 
   search() {
-      console.log('search');
       console.log(this.materials);
 
-      if (Object.keys(this.materials).length == 0) {
+      if (this.materials.length == 0) {
         let alert = this.alertCtrl.create({
           title: 'Oops!',
-          subTitle: 'You must select at least one unavailable material before searching.',
+          subTitle: 'You must select at least one option before searching.',
+          buttons: ['OK']
+        });
+        alert.present();
+      } else if (this.materials.length > 2) { // Change to limit how many user can select depending on algorithm.
+        let alert = this.alertCtrl.create({
+          title: 'Oops!',
+          subTitle: 'You may not select more than 2 unavailable options at the moment.',
+          buttons: ['OK']
+        });
+        alert.present();
+      } else if (this.materials.length > 1 && this.materials.includes('All Available')) {
+        let alert = this.alertCtrl.create({
+          title: 'Oops!',
+          subTitle: 'You may not select "All Available" and an unavailable material.',
           buttons: ['OK']
         });
         alert.present();

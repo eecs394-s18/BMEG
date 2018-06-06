@@ -39,14 +39,18 @@ export class RegionsurveyPage {
       var salt = (water == "Salt water resistant" ? true : false);
 
       var names = [];
-      
+
       // Get JSON here
       for (var key in data) {
         var shouldAdd = true;
 
-        if (acidic && !data[key]["acidic"]) shouldAdd = false;
-        if (alkali && !data[key]["alkaline"]) shouldAdd = false;
-        if (salt && !data[key]["salt_water"]) shouldAdd = false;
+        /***********************************************************************************************/
+        /* TODO: UNCOMMENT IF YOU WOULD LIKE TO ACTUALLY FILTER OUT MATERIALS USING THE DECISION TREE. */
+        /***********************************************************************************************/
+
+        // if (acidic && !data[key]["acidic"]) shouldAdd = false;
+        // if (alkali && !data[key]["alkaline"]) shouldAdd = false;
+        // if (salt && !data[key]["salt_water"]) shouldAdd = false;
 
         if (shouldAdd) names.push(data[key]["name"]);
       }
