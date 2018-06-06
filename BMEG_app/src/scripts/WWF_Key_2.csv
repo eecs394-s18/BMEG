@@ -1,0 +1,101 @@
+Scenario,
+1,No Wood
+2,No CGI
+3,No Slate
+4,No Aluminum
+5,No Ceramic
+6,No Plywood
+7,No Bamboo
+8,No Brick
+9,No Stone
+10,No CSEB
+11,No Concrete
+12,No Aerated Concrete
+13,"No Wood, CGI"
+14,"No Wood, Slate"
+15,"No Wood, Aluminum"
+16,"No Wood, Ceramic"
+17,"No Wood, Plywood"
+18,"No Wood, Brick"
+19,"No Wood, Stone"
+20,"No Wood, CSEB"
+21,"No Wood, Aerated Concrete"
+22,"No CGI, Slate"
+23,"No CGI, Aluminum"
+24,"No CGI, Ceramic"
+25,"No CGI, Plywood"
+26,"No CGI, Bamboo"
+27,"No CGI, Brick"
+28,"No CGI, Stone"
+29,"No CGI, CSEB"
+30,"No CGI, Concrete"
+31,"No CGI, Aerated Concrete"
+32,"No Slate, Aluminum"
+33,"No Slate, Ceramic"
+34,"No Slate, Plywood"
+35,"No Slate, Bamboo"
+36,"No Slate, Brick"
+37,"No Slate, Stone"
+38,"No Slate, CSEB"
+39,"No Slate, Concrete"
+40,"No Slate, Aerated Concrete"
+41,"No Aluminum, Ceramic"
+42,"No Aluminum, Plywood"
+43,"No Aluminum, Bamboo"
+44,"No Aluminum, Brick"
+45,"No Aluminum, Stone"
+46,"No Aluminum, CSEB"
+47,"No Aluminum, Concrete"
+48,"No Aluminum, Aerated Concrete"
+49,"No Ceramic, Plywood"
+50,"No Ceramic, Bamboo"
+51,"No Ceramic, Brick"
+52,"No Ceramic, Stone"
+53,"No Ceramic, CSEB"
+54,"No Ceramic, Aerated Concrete"
+55,"No Plywood, Bamboo"
+56,"No Plywood, Brick"
+57,"No Plywood, Stone"
+58,"No Plywood, CSEB"
+59,"No Plywood, Concrete"
+60,"No Plywood, Aerated Concrete"
+61,"No Bamboo, Brick"
+62,"No Bamboo, Stone"
+63,"No Bamboo, CSEB"
+64,"No Bamboo, Concrete"
+65,"No Bamboo, Aerated Concrete"
+66,"No Brick, CSEB"
+67,"No Brick, Aerated Concrete"
+68,"No Stone, CSEB"
+69,"No Stone, Concrete"
+70,"No Stone, Aerated Concrete"
+71,"No CSEB, Concrete"
+72,"No CSEB, Aerated Concrete"
+73,All Available
+,
+Floor Number,Floor Type
+1,Brick-Concrete
+2,Stone-Concrete
+3,Brick-Aerated Concrete
+,
+Wall Number,Wall Type
+1,Brick-Concrete
+2,Stone-Concrete
+3,Bamboo-Concrete
+4,CSEB-Concrete
+5,Concrete Blocks-Concrete
+6,Brick-Aerated Concrete
+,
+Roof Number,Roof Type
+1,Wood-CGI
+2,Wood-Slate
+3,Bamboo-CGI
+4,Wood-Aluminum
+5,Bamboo-Aluminum
+6,Plywood-Wood-Ceramic
+7,Bamboo-Wood-Ceramic
+,
+Option,
+1,Always lowest embedded energy
+3,Always lowest cost
+2,Intermediate choice

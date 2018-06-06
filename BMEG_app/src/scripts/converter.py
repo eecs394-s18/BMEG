@@ -16,7 +16,7 @@ keys = {
 }
 index = None
 
-with open('WWF_Results.csv') as csvfile:
+with open('WWF_Results_2.csv') as csvfile:
     my_reader = csv.reader(csvfile)
     for row in my_reader:
         if (row[0] in descriptors):
@@ -39,12 +39,12 @@ with open('WWF_Results.csv') as csvfile:
 with io.open('../assets/database/results.json', 'w', encoding = 'utf-8') as f:
     f.write(unicode(json.dumps(results, ensure_ascii = False)))
 
-with open('WWF_Key.csv') as csvfile:
+with open('WWF_Key_2.csv') as csvfile:
     my_reader = csv.reader(csvfile)
     for row in my_reader:
         if (row[0] in descriptors):
             index = descriptors.index(row[0]) # set key value to add to appropriate dictionary
-            continue;
+            continue
         else:
             if (index == 0):    # reverse key-value ordering for scenario option
                 name = row[1][3:]     # strip "no" from string
