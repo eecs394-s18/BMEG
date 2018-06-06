@@ -12,8 +12,14 @@
 
 </ion-header>
 
-<ion-content padding class="background">
-	<ion-card >
+<ion-content *ngIf="flag === true" padding class="background">
+	<div class="text-center">
+		Data is not available for this type of building right now.
+	</div>
+</ion-content>
+
+<ion-content *ngIf="flag === false" padding class="background">
+	<ion-card>
 		<ion-card-content>
 			<ion-card-title>Two Room One Story House</ion-card-title>
 			<img src="../assets/imgs/house.png">

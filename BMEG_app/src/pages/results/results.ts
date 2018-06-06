@@ -29,6 +29,8 @@ export class ResultsPage {
 
 	public nameMap:any;
 
+	public flag:boolean;
+
   	constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
 
 		this.low_cost = {};
@@ -47,11 +49,20 @@ export class ResultsPage {
 			'Compressed Stabilized Earth Blocks': 'CSEB',
 			'Ceramic Tiles': 'Ceramic'
 		};
+
+		this.flag = false;
   	}
 
   ionViewDidLoad() {
 
 	console.log('ionViewDidLoad ResultsPage', this.navParams.get('materials'));
+
+	let building = this.navParams.get('building');
+
+	if (building != "Two Room House") { // we currently only support two room houses.
+		this.flag = true;
+		return;
+	}
 
 	this.readAllJSONData().then(() => {
 

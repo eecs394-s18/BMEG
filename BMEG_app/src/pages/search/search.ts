@@ -20,13 +20,15 @@ export class SearchPage {
     public materials:any;
     public names: any;
     public building_types: any;
+    public building_type: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
       this.materials = [];
       this.names = this.navParams.get("names") as any;
       this.names.sort();
       this.names.unshift("All Available");
-      this.building_types = ['Two Room House','Three Room House', 'Four Room House']
+      this.building_types = ['Two Room House','Three Room House', 'Four Room House'];
+      this.building_type = "";
   }
 
   ionViewDidLoad() {
@@ -35,7 +37,16 @@ export class SearchPage {
   }
 
   search() {
-      console.log(this.materials);
+
+      if (this.building_type == "") {
+        let alert = this.alertCtrl.create({
+          title: 'Oops!',
+          subTitle: 'You must select a building type before searching.',
+          buttons: ['OK']
+        });
+        alert.present();
+        return;
+      }
 
       if (this.materials.length == 0) {
         let alert = this.alertCtrl.create({
@@ -59,7 +70,7 @@ export class SearchPage {
         });
         alert.present();
       } else {
-        this.navCtrl.push(ResultsPage, {materials: this.materials});
+        this.navCtrl.push(ResultsPage, {materials: this.materials, building: this.building_type});
       }
   }
 }
