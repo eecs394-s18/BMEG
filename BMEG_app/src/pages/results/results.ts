@@ -54,11 +54,18 @@ export class ResultsPage {
 	console.log('ionViewDidLoad ResultsPage', this.navParams.get('materials'));
 
 	this.readAllJSONData().then(() => {
-		console.log("finished reading data");
 
 		let material = this.navParams.get('materials')
+		let key = "";
 
-    	console.log(material);
+		// If more than one selected, concatenate with commas.
+		if (material.length != 1) {
+			material.forEach(element => {
+
+			});
+		} else {
+
+		}
 
 		// Replace display name with database index name
 		if (this.nameMap[material] != undefined) {

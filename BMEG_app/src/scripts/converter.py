@@ -48,6 +48,12 @@ with open('WWF_Key_2.csv') as csvfile:
         else:
             if (index == 0):    # reverse key-value ordering for scenario option
                 name = row[1][3:]     # strip "no" from string
+
+                if ("," in name):   # if more than one unavailable, alphabetize and reconcatenate
+                    temp = name.split(", ")
+                    temp.sort()
+                    name = ", ".join(temp)
+
                 keys[index][name] = row[0]
             else:
                 keys[index][row[0]] = row[1]
