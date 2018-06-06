@@ -19,13 +19,8 @@
     <ion-list>
 
         <ion-item>
-<<<<<<< HEAD
         <ion-label floating>Are Any Materials Unavailable?</ion-label>
         <ion-select [(ngModel)]="materials" name="materials" multiple="true">
-=======
-        <ion-label floating>Select up to two unavailable materials</ion-label>
-        <ion-select [(ngModel)]="materials" name="materials" multiple="false">
->>>>>>> 86ea7d656d6227e27352ea2a7fee459514b34427
           <ion-option *ngFor="let name of names">{{ name }}</ion-option>
         </ion-select>
         </ion-item>
