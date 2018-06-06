@@ -60,21 +60,26 @@ export class ResultsPage {
 
 		// If more than one selected, concatenate with commas.
 		if (material.length != 1) {
-			material.forEach(element => {
-
+			material.sort(); 	// sort before concatenating
+			material.forEach((element, index, arr) => {
+				if (this.nameMap[element] != undefined) {
+					arr[index] = this.nameMap[element];
+				}
 			});
+			key = material.join(", ");
 		} else {
-
+			// Replace display name with database index name
+			if (this.nameMap[material[0]] != undefined) {
+				key = this.nameMap[material[0]];
+			} else {
+				key = material[0];
+			}
 		}
 
-		// Replace display name with database index name
-		if (this.nameMap[material] != undefined) {
-			material = this.nameMap[material];
-		}
+		let scenario_number = this.scenarios[key];
 
-		let scenario_number = this.scenarios[material];
-		this.low_cost = this.results[scenario_number][2]
-		this.middle = this.results[scenario_number][3]
+		this.low_cost = this.results[scenario_number][3]
+		this.middle = this.results[scenario_number][2]
 		this.low_impact = this.results[scenario_number][1]
 	});
   }
