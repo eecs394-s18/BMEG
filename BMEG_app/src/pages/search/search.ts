@@ -70,6 +70,7 @@ export class SearchPage {
         });
         alert.present();
       } else {
+        // push search parameters to the results page
         this.navCtrl.push(ResultsPage, {materials: this.materials, building: this.building_type});
       }
   }

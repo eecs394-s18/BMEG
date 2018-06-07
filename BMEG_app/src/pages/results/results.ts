@@ -136,6 +136,7 @@ export class ResultsPage {
 	});
   }
 
+  // modify hardcoded JSON for more options
   readJSONData(param: string) {
 	  return this.http.get('../../assets/database/'+ param).toPromise();
   }
