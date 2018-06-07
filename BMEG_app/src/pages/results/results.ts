@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BuildingplansPage } from '../buildingplans/buildingplans';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the ResultsPage page.
@@ -31,7 +32,7 @@ export class ResultsPage {
 
 	public flag:boolean;
 
-  	constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
+  	constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public alertCtrl: AlertController) {
 
 		this.low_cost = {};
 		this.middle = {};
@@ -88,6 +89,16 @@ export class ResultsPage {
 		}
 
 		let scenario_number = this.scenarios[key];
+
+		if (scenario_number == undefined) { // No option outputted by the algorithm
+			let alert = this.alertCtrl.create({
+				title: 'Data Unavailable',
+				subTitle: 'No recommendations are available at the moment based on your selection.',
+				buttons: ['OK']
+			});
+			alert.present();
+			return;
+		}
 
 		this.low_cost = this.results[scenario_number][3]
 		this.middle = this.results[scenario_number][2]
