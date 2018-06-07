@@ -4,8 +4,8 @@ Automating BMEG to allow construction professionals to find the most environment
 
 Flow of the BMEG app (all of the pages are located in the src folder):
 Home Page-> Regionsurvey Page-> Search Page-> Results Page-> Buildingplans Page
-[example of BMEG in use 1](./demos/example1.gif)
-[example of BMEG in use 2](./demos/example2.gif)
+![example of BMEG in use 1](./demos/example1.gif)
+![example of BMEG in use 2](./demos/example2.gif)
 ## Prerequisites
 
 - Node >= 8.0
