@@ -28,14 +28,17 @@ export class RegionsurveyPage {
   }
 
   findmaterials() {
+    // why are we using http for a local file?
     this.http.get('../../assets/database/decision_tree_util.json').toPromise().then(data => {
       const climate = this.results.climate;
       const soil_type = this.results.soiltype;
       const water = this.results.water;
 
       var acidic = (soil_type == "Acidic" ? true : false);
+      // alkali means basic, i.e. ph > 7.
       var alkali = (soil_type == "Alkali" ? true : false);
       var neutral = (soil_type == "Neutral" ? true : false);
+      // NaCl is a popular salt, also sodium chloride
       var salt = (water == "Salt water resistant" ? true : false);
 
       var names = [];
@@ -54,6 +57,7 @@ export class RegionsurveyPage {
 
         if (shouldAdd) names.push(data[key]["name"]);
       }
+      // transition to the next page (search)
       this.navCtrl.push(SearchPage, { names: names });
     }).catch(err => {
       console.log(err);
